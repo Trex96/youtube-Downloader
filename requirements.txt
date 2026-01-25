@@ -1,0 +1,4 @@
+pypubsub==4.0.3
+numpy
+wxpython>=4.0.7.post2
+polib==1.2.0
