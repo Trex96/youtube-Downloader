@@ -49,6 +49,8 @@ def get_encoding() -> str:
 def startfile(file_path: str) -> None:
     if os.name == "nt":
         os.startfile(file_path)  # type: ignore[attr-defined]
+    elif sys.platform == "darwin":
+        subprocess.call(("open", file_path))
     else:
         subprocess.call(("xdg-open", file_path))
 
